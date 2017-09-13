@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/content_main"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.sinem.giraffe.MainActivity"
+    tools:showIn="@layout/app_bar_main"
+    android:weightSum="5">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/map_part"
+        android:layout_weight="5">
+        <fragment
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:id="@+id/search_area"
+        android:background="@color/colorPrimary">
+        <EditText
+            android:layout_width="320dp"
+            android:layout_height="44dp"
+            android:id="@+id/search_places"
+            android:hint="Hadi Girafla!"
+            android:layout_marginLeft="8dp"
+            android:background="#ffffff"
+            android:layout_gravity="center"
+            />
+        <ImageButton
+            android:id="@+id/l_giraffe"
+            android:layout_width="36dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:background="@color/colorAccent"
+            android:src="@mipmap/ic_search"
+            android:onClick="girafla"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>
