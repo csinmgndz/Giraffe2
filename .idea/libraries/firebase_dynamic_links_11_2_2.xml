@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="firebase-dynamic-links-11.2.2">
     <CLASSES>
-      <root url="file://$USER_HOME$/.android/build-cache/c0b70469aafc56bed3a2bb8e6edaf909c35c21f6/output/res" />
-      <root url="jar://$USER_HOME$/.android/build-cache/c0b70469aafc56bed3a2bb8e6edaf909c35c21f6/output/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.android/build-cache/5ae1ebe93e5679fbfefff7c22ba23327c1d2f299/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/5ae1ebe93e5679fbfefff7c22ba23327c1d2f299/output/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
