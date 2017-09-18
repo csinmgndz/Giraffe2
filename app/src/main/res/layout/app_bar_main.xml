@@ -14,10 +14,7 @@
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
 
-        <android.support.design.widget.Toolbar
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:id="@+id/toolbar">
+
 
             <ImageButton
                 android:id="@+id/menu_icon"
@@ -71,7 +68,6 @@
                 android:paddingTop="16dp"
                 android:src="@mipmap/ic_world" />
 
-        </android.support.design.widget.Toolbar>
 
 
     </android.support.design.widget.AppBarLayout>
