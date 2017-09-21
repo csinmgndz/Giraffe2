@@ -56,7 +56,7 @@ public class SignUpRegisterActivity extends BaseActivity {
 
 
 
-       userNameSurname= (EditText) findViewById(R.id.adSoyad);
+        userNameSurname= (EditText) findViewById(R.id.adSoyad);
         userName=(EditText) findViewById(R.id.txt_userName);
         userEmail=(EditText)findViewById(R.id.email_address);
         userPassword=(EditText)findViewById(R.id.txt_password);
@@ -103,31 +103,24 @@ public class SignUpRegisterActivity extends BaseActivity {
     private void createAccount(){
         String email = userEmail.getText().toString();
         String password = userPassword.getText().toString();
-
-        mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+        mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener
+                (this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-                            Log.d(TAG, "createUserWithEmail:onComplete: "+task.isSuccessful());
-                            Intent login= new Intent(SignUpRegisterActivity.this,MainActivity.class);
-                            startActivity(login);
-                        } else {
-                            // If sign in fails, display a message to the user.
+                        Log.d(TAG, "createUserWithEmail:onComplete: "+task.isSuccessful());
+                        Intent login= new Intent(SignUpRegisterActivity.this,MainActivity.class);
+                        startActivity(login);
+
+                        if(!task.isSuccessful()){
                             Toast.makeText(SignUpRegisterActivity.this,
                                     "Kaydınız yapılamadı... Tekrar deneyiniz!",Toast.LENGTH_SHORT).show();
                         }
-
-                        // ...
                     }
                 });
-
     }
 
 
 
 
+
 }
-
-

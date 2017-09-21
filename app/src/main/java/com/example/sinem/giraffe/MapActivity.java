@@ -1,35 +1,27 @@
 package com.example.sinem.giraffe;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.annotation.StringRes;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.app.AppCompatDialog;
 import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.location.places.GeoDataClient;
-import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.PlaceDetectionClient;
 import com.google.android.gms.location.places.PlaceLikelihood;
 import com.google.android.gms.location.places.PlaceLikelihoodBufferResponse;
 import com.google.android.gms.location.places.Places;
-import com.google.android.gms.location.places.ui.PlacePicker;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
@@ -103,38 +95,38 @@ public class MapActivity extends Activity implements OnMapReadyCallback {
 
     @Override
     public void onMapReady(GoogleMap map) {
-            mMap=map;
+        mMap=map;
 
-            // Use a custom info window adapter to handle multiple lines of text in the
-            // info window contents.
-            mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+        // Use a custom info window adapter to handle multiple lines of text in the
+        // info window contents.
+        mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
 
-                @Override
-                // Return null here, so that getInfoContents() is called next.
-                public View getInfoWindow(Marker arg0) {
-                    return null;}
-                    @Override
-                    public View getInfoContents(Marker marker) {
-                        // Inflate the layouts for the info window, title and snippet.
-                        View infoWindow = getLayoutInflater().inflate(R.layout.content_main,
-                                (FrameLayout) findViewById(R.id.map_part), false);
+            @Override
+            // Return null here, so that getInfoContents() is called next.
+            public View getInfoWindow(Marker arg0) {
+                return null;}
+            @Override
+            public View getInfoContents(Marker marker) {
+                // Inflate the layouts for the info window, title and snippet.
+                View infoWindow = getLayoutInflater().inflate(R.layout.content_main,
+                        (FrameLayout) findViewById(R.id.map_part), false);
 
-                        TextView title = ((TextView) infoWindow.findViewById(R.id.title));
-                        title.setText(marker.getTitle());
+                TextView title = ((TextView) infoWindow.findViewById(R.id.title));
+                title.setText(marker.getTitle());
 
-                        TextView snippet = ((TextView) infoWindow.findViewById(R.id.snippet));
-                        snippet.setText(marker.getSnippet());
+                TextView snippet = ((TextView) infoWindow.findViewById(R.id.snippet));
+                snippet.setText(marker.getSnippet());
 
-                        return infoWindow;
-                    }
-                });
-
-                getLocationPermission();
-
-                updateLocationUI();
-
-                getDeviceLocation();
+                return infoWindow;
             }
+        });
+
+        getLocationPermission();
+
+        updateLocationUI();
+
+        getDeviceLocation();
+    }
 
 
     private void getDeviceLocation() {
@@ -278,8 +270,8 @@ public class MapActivity extends Activity implements OnMapReadyCallback {
 
             // Add a default marker, because the user hasn't selected a place.
             mMap.addMarker(markerOptions.title(title)
-            .snippet(snippet)
-            .position(izmir));
+                    .snippet(snippet)
+                    .position(izmir));
 
             // Prompt the user for permission.
             getLocationPermission();
