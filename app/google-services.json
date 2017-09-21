@@ -1,35 +1,27 @@
 {
   "project_info": {
-    "project_number": "315031050500",
-    "firebase_url": "https://giraffe-624ea.firebaseio.com",
-    "project_id": "giraffe-624ea",
-    "storage_bucket": "giraffe-624ea.appspot.com"
+    "project_number": "333416519663",
+    "firebase_url": "https://giraffe-2d764.firebaseio.com",
+    "project_id": "giraffe-2d764",
+    "storage_bucket": "giraffe-2d764.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:315031050500:android:00d2fdd696880ae7",
+        "mobilesdk_app_id": "1:333416519663:android:00d2fdd696880ae7",
         "android_client_info": {
           "package_name": "com.example.sinem.giraffe"
         }
       },
       "oauth_client": [
         {
-          "client_id": "315031050500-08dudg6stij5edqei018oga8ccs418pt.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.sinem.giraffe",
-            "certificate_hash": "5853206f1952543f760b6c6e9ff7788a3ad735be"
-          }
-        },
-        {
-          "client_id": "315031050500-v04pnrs3i93bnotf5f42hsuoabn0v030.apps.googleusercontent.com",
+          "client_id": "333416519663-b7tr60hnluu016vb1p4mkhr36r9c8tfd.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCTJ8omJHD-40VfLdS-wAYDpOeZRGxi4kI"
+          "current_key": "AIzaSyC6NYLxl7n6nM0QUqhzbAlEXk9W3c0rEPY"
         }
       ],
       "services": {
@@ -37,13 +29,8 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "315031050500-v04pnrs3i93bnotf5f42hsuoabn0v030.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "status": 1,
+          "other_platform_oauth_client": []
         },
         "ads_service": {
           "status": 2
